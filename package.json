@@ -4,7 +4,8 @@
   "description": "Web Components Slides",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "bs serve",
+    "build": "bs export --no-inline --output dist"
   },
   "author": "",
   "license": "MIT",
