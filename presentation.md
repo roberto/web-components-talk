@@ -1,4 +1,4 @@
-title: My Presentation
+title: Web Components
 class: animation-fade
 layout: true
 
@@ -12,68 +12,163 @@ layout: true
 class: impact
 
 # {{title}}
-## With a good subtitle :-)
+## Usando o melhor do navegador
 
 ---
 
-# The basics
-
-## Getting started
-
-Use [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write your slides. Don't be afraid, it's really easy!
-
---
-
-## Making points
-
-Look how you can make *some* points:
---
-
-- Create slides with your **favorite text editor**
---
-
-- Focus on your **content**, not the tool
---
-
-- You can finally be **productive**!
-
----
-
-# There's more
-
-## Syntax highlighting
-
-You can also add `code` to your slides:
 ```html
-<div class="impact">Some HTML code</div>
+<p></p>
+<input />
+<audio />
+<video />
 ```
 
-## CSS classes
+```html
+<profile-avatar />
+<like-button />
+```
 
-You can use .alt[shortcut] syntax to apply .big[some style!]
-
-...or just <span class="alt">HTML</span> if you prefer.
+???
+HTML já define diversas tags, tão simples quanto um `p` e tão poderosas quanto `video`. E se você pudesse criar as suas? Desde um botão “like” até elementos mais complexos quanto uma aplicação.
 
 ---
 
-# And more...
 
-## 12-column grid layout
+```js
+class ProfileAvatar extends HTMLElement {
+  // ...
+}
+customElements.define('profile-avatar', ProfileAvatar)
+```
 
-Use to the included **grid layout** classes to split content easily:
-.col-6[
-  ### Left column
+???
+Basicamente você pode colocar seu código JavaScript numa unidade e disponibilizá-la para o navegador.
 
-  - I'm on the left
-  - It's neat!
-]
-.col-6[
-  ### Right column
+---
 
-  - I'm on the right
-  - I love it!
-]
+```html
+<div class="profile-avatar">
+  <a href="...">
+    <img src="..." alt="..." />
+    <span class="name">...</span>
+  </a>
+</div>
 
-## Learn the tricks
+<!-- ainda tendo que indicar as informações a serem apresentadas -->
+<profile-avatar />
+```
 
-See the [wiki](https://github.com/gnab/remark/wiki) to learn more of what you can do with .alt[Remark.js]
+???
+Teu HTML ficará bem mais limpo, facilitando a leitura, alterações, e todas aquelas coisas maravilhosas que você pode ler na nova edição de Refactoring por Martin Fowler.
+
+---
+
+```html
+class ProfileAvatar extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="profile-avatar">
+        <a href="...">
+          <img src="..." alt="..." />
+          <span class="name">...</span>
+        </a>
+      </div>`
+  }
+}
+customElements.define('profile-avatar', ProfileAvatar)
+```
+
+???
+Tudo junto.
+---
+
+```
+const shadow = this.attachShadow({mode: 'open'})
+shadow.appendChild(content)
+```
+---
+
+> TODO imagens demonstrando o uso de shadow aberto ou fechado. texto fora de cor X e texto interno usando ou não a mesma cor.
+
+
+```
+body {
+  color: red;
+}
+```
+
+---
+> TODO Fala de template. Com exemplo.
+
+
+> TODO Os templates são templates. Limpando o JS.
+
+
+---
+
+# Web Components
+
+- Conjunto de especificações da W3C
+  - Custom Element
+  - Shadow DOM
+  - Templates
+
+---
+
+# Prakê que usa essa p*rra?
+
+- Compartilhar componentes
+  - para a comunidade, date-picker
+  - componentes internos
+  - Interoperabilidade com outras soluções
+    - Angular elements
+    - Vue wrapper
+    - https://github.com/vuejs/vue-web-component-wrapper
+    - https://angular.io/guide/elements
+- Site
+  - YouTube
+    - adicionar código aqui
+- Micro frontends
+  - Compor aplicações
+  - [micro-frontends.org](https://micro-frontends.org/)
+  - OpenComponents
+  - plastic-bag
+
+
+> O uso mais notável é de compartilhar componentes
+
+
+> Escrever melhor saporra.
+
+
+---
+
+# Compatibilidade
+
+- Browsers
+- Frameworks JS
+
+---
+
+# Ferramentas
+
+- StencilJS
+- Polymer
+
+---
+
+# Futuro
+
+- Outra versão?
+  - Sem previsão
+- Frameworks utilizando
+  - perquisar: vue usando build, frameworks “somem” ao compilar
+- + WebAssembly
+  - https://medium.com/coinmonks/develop-w3c-web-components-with-webassembly-d65938284255
+  - https://itnext.io/the-promise-of-webcomponents-webassembly-ad26af56fcf1
+
+
+---
+
+# Obrigada/o! Dudas?
+
