@@ -21,12 +21,7 @@ $iframe-scale: 1.5;
 $default-primary: black;
 $default-secondary: white;
 
-$first-color: #fd7c20;
-$second-color: #f10035;
-$third-color: #822729;
-$fourth-color: #005a96;
-$fifth-color: #0097cb;
-$sixth-color: #009650;
+$colors: #fd7c20, #f10035, #822729, #005a96, #0097cb, #009650;
 
 // CSS Base
 // ---------------------------------------------------------------------------
@@ -174,12 +169,10 @@ blockquote {
 .impact {
   text-shadow: black 3px 3px 2px;
 
-  &.first-color {
-    background-color: $first-color;
-  }
-
-  &.sixth-color {
-    background-color: $sixth-color;
+  @for $i from 1 through 6 {
+    &.color-#{$i} {
+      background-color: nth($colors, $i);
+    }
   }
 }
 
@@ -197,17 +190,17 @@ blockquote {
 .top-bar {
   background: linear-gradient(
     to right,
-    $first-color 16.6%,
-    $second-color 16.6%,
-    $second-color 33.2%,
-    $third-color 33.2%,
-    $third-color 49.8%,
-    $fourth-color 49.8%,
-    $fourth-color 66.4%,
-    $fifth-color 66.4%,
-    $fifth-color 83%,
-    $sixth-color 83%,
-    $sixth-color 100%
+    nth($colors, 1) 16.6%,
+    nth($colors, 2) 16.6%,
+    nth($colors, 2) 33.2%,
+    nth($colors, 3) 33.2%,
+    nth($colors, 3) 49.8%,
+    nth($colors, 4) 49.8%,
+    nth($colors, 4) 66.4%,
+    nth($colors, 5) 66.4%,
+    nth($colors, 5) 83%,
+    nth($colors, 6) 83%,
+    nth($colors, 6) 100%
   );
 }
 

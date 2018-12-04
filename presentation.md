@@ -11,7 +11,7 @@ layout: true
 
 ---
 
-class: impact first-color
+class: impact color-1
 
 # {{title}}
 
@@ -168,7 +168,7 @@ body {
 
 ---
 
-class: impact sixth-color
+class: impact color-6
 
 # Obrigada(o)!
 ## Perguntas?
