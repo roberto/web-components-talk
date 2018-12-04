@@ -1,62 +1,95 @@
 // Theme
 // ---------------------------------------------------------------------------
 
-$primary          : #3F51B5;
-$secondary        : #009688;
-$tertiary         : #757575;
-$light            : #FFF;
-$dark             : #333;
-$text-dark        : #212121; 
-$text-light       : $light;
-$code-background  : #F8F8F8;
-$overlay          : transparentize(#000, .5);
-$font-size        : 28px;
-$font-size-impact : 128px;
-$font             : Arial, Helvetica, sans-serif;
-$font-title       : Arial, Helvetica, sans-serif;
-$font-fixed       : 'Lucida Console', Monaco, monospace;
-$margin           : 20px;
-$iframe-scale     : 1.5;
-
+$primary: #3f51b5;
+$secondary: #009688;
+$tertiary: #757575;
+$light: #fff;
+$dark: #333;
+$text-dark: #212121;
+$text-light: $light;
+$code-background: #f8f8f8;
+$overlay: transparentize(#000, 0.5);
+$font-size: 28px;
+$font-size-impact: 128px;
+$font: Arial, Helvetica, sans-serif;
+$font-title: Arial, Helvetica, sans-serif;
+$font-fixed: "Lucida Console", Monaco, monospace;
+$margin: 20px;
+$iframe-scale: 1.5;
 
 // CSS Base
 // ---------------------------------------------------------------------------
 
-* { box-sizing: border-box; }
-body { font-family: $font; }
-h1, h2, h3, h4, h5, h6 {
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 $margin 0;
   font-family: $font-title;
 }
-h1 { color: $primary; }
-h2 { color: $secondary; }
-h3 { color: $tertiary; }
-li { margin-bottom: .25em; };
-pre, code {
+h1 {
+  color: $primary;
+}
+h2 {
+  color: $secondary;
+}
+h3 {
+  color: $tertiary;
+}
+li {
+  margin-bottom: 0.25em;
+}
+pre,
+code {
   text-align: left;
   font-family: $font-fixed;
   color: $secondary;
   background: $code-background;
 }
-a, a:visited, a:hover, a:active { color: $text-dark; }
-img { vertical-align: inherit; }
+a,
+a:visited,
+a:hover,
+a:active {
+  color: $text-dark;
+}
+img {
+  vertical-align: inherit;
+}
 blockquote {
   border-left: 8px solid;
-  padding-left: .5em;
+  padding-left: 0.5em;
   color: $tertiary;
   text-align: left;
   margin: 1em 0;
-  & > p { margin: 0; }
+  & > p {
+    margin: 0;
+  }
 }
-
 
 // Remark base
 // ---------------------------------------------------------------------------
 
-.remark-code { font-size: .9em; }
-.remark-container { background: $dark; }
-.remark-slide-scaler { box-shadow: none; }
-.remark-notes { font-size: 1.5em; }
+.remark-code {
+  font-size: 0.9em;
+}
+.remark-container {
+  background: $dark;
+}
+.remark-slide-scaler {
+  box-shadow: none;
+}
+.remark-notes {
+  font-size: 1.5em;
+}
 
 .remark-slide-content {
   font-size: $font-size;
@@ -68,10 +101,12 @@ blockquote {
 .remark-slide-number {
   color: $text-light;
   right: 1em;
-  opacity: .6;
+  opacity: 0.6;
   font-size: 0.8em;
   z-index: 2;
-  .no-counter & { display: none; }
+  .no-counter & {
+    display: none;
+  }
 }
 
 // Additions
@@ -79,15 +114,25 @@ blockquote {
   background-color: $primary;
   vertical-align: middle;
   text-align: center;
-  &, h1, h2 { color: $text-light; }
-  h1 { font-size: $font-size-impact; }
+  &,
+  h1,
+  h2 {
+    color: $text-light;
+  }
+  h1 {
+    font-size: $font-size-impact;
+  }
 }
 
 .full {
-  &, h1, h2 { color: $text-light; }
+  &,
+  h1,
+  h2 {
+    color: $text-light;
+  }
   &iframe {
-    height: calc(#{100%/$iframe-scale} - 1.2em);
-    width: 100%/$iframe-scale;
+    height: calc(#{100% / $iframe-scale} - 1.2em);
+    width: 100% / $iframe-scale;
     transform: scale($iframe-scale);
     transform-origin: 0 0;
     border: 0;
@@ -102,13 +147,17 @@ blockquote {
   left: 0;
   right: 0;
   font-size: 20px;
-  padding: .8em;
+  padding: 0.8em;
   text-align: left;
   z-index: 1;
-  p { margin: 0;}
-  .impact &, .full & { display: none; }
+  p {
+    margin: 0;
+  }
+  .impact &,
+  .full & {
+    display: none;
+  }
 }
-
 
 // Utilities
 // ---------------------------------------------------------------------------
@@ -120,49 +169,111 @@ blockquote {
   width: 100%;
   padding: 0 2em;
 }
-.middle { &, & img, & span { vertical-align: middle; } };
-.top { vertical-align: top; };
-.bottom { vertical-align: bottom; };
+.middle {
+  &,
+  & img,
+  & span {
+    vertical-align: middle;
+  }
+}
+.top {
+  vertical-align: top;
+}
+.bottom {
+  vertical-align: bottom;
+}
 .inline-block {
-  p, ul, ol, blockquote {
+  p,
+  ul,
+  ol,
+  blockquote {
     display: inline-block;
     text-align: left;
   }
 }
-.no-margin { &, & > p, & > pre, & > ul, & > ol { margin: 0; } }
-.no-padding { padding: 0; }
-.space-left { padding-left: 1em; }
-.space-right { padding-right: 1em; }
+.no-margin {
+  &,
+  & > p,
+  & > pre,
+  & > ul,
+  & > ol {
+    margin: 0;
+  }
+}
+.no-padding {
+  padding: 0;
+}
+.space-left {
+  padding-left: 1em;
+}
+.space-right {
+  padding-right: 1em;
+}
 
 // Images
-.responsive > img { width: 100%; height: auto; };
-.contain { background-size: contain; };
-.overlay { box-shadow: inset 0 0 0 9999px $overlay; }
+.responsive > img {
+  width: 100%;
+  height: auto;
+}
+.contain {
+  background-size: contain;
+}
+.overlay {
+  box-shadow: inset 0 0 0 9999px $overlay;
+}
 
 // Text
-.left { text-align: left; }
-.right { text-align: right; }
-.center { text-align: center; }
-.justify { text-align: justify; }
-.primary { color: $primary; }
-.alt { color: $secondary; };
-.em { color: $tertiary; };
-.thin { font-weight: 200; }
-.huge { font-size: 2em; }
-.big { font-size: 1.5em; }
-.small { font-size: .8em; }
-.dark-bg { background-color: $dark; }
-.alt-bg { background-color: $secondary; };
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
+.primary {
+  color: $primary;
+}
+.alt {
+  color: $secondary;
+}
+.em {
+  color: $tertiary;
+}
+.thin {
+  font-weight: 200;
+}
+.huge {
+  font-size: 2em;
+}
+.big {
+  font-size: 1.5em;
+}
+.small {
+  font-size: 0.8em;
+}
+.dark-bg {
+  background-color: $dark;
+}
+.alt-bg {
+  background-color: $secondary;
+}
 
 // Simple 12-columns grid system
 .row {
   width: 100%;
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
-  &.table { display: table; };
+  &.table {
+    display: table;
+  }
   &.table [class^="col-"] {
     float: none;
     display: table-cell;
@@ -179,22 +290,29 @@ blockquote {
 }
 
 @for $i from 1 through 12 {
-  .col-#{$i} {width: 100% / 12 * $i; }
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+  }
 }
 
 // Animations
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .animation-fade {
   animation-duration: 300ms;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
-  .remark-visible & { animation-name: fadeIn; }
+  .remark-visible & {
+    animation-name: fadeIn;
+  }
 }
-
 
 // Fix PDF print with chrome
 // ---------------------------------------------------------------------------
