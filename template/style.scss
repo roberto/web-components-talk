@@ -171,7 +171,18 @@ blockquote {
 
 // Theme
 
-.bottom-bar {
+.top-bar {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 1;
+}
+
+.bottom-bar,
+.top-bar {
   background: linear-gradient(
     to right,
     $first-color 16.6%,
