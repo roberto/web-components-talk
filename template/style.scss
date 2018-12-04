@@ -171,6 +171,18 @@ blockquote {
 
 // Theme
 
+.impact {
+  text-shadow: black 3px 3px 2px;
+
+  &.first-color {
+    background-color: $first-color;
+  }
+
+  &.sixth-color {
+    background-color: $sixth-color;
+  }
+}
+
 .top-bar {
   content: "";
   position: absolute;
