@@ -18,6 +18,16 @@ $font-fixed: "Lucida Console", Monaco, monospace;
 $margin: 20px;
 $iframe-scale: 1.5;
 
+$default-primary: black;
+$default-secondary: white;
+
+$first-color: #fd7c20;
+$second-color: #f10035;
+$third-color: #822729;
+$fourth-color: #005a96;
+$fifth-color: #0097cb;
+$sixth-color: #009650;
+
 // CSS Base
 // ---------------------------------------------------------------------------
 
@@ -157,6 +167,30 @@ blockquote {
   .full & {
     display: none;
   }
+}
+
+// Theme
+
+.bottom-bar {
+  background: linear-gradient(
+    to right,
+    $first-color 16.6%,
+    $second-color 16.6%,
+    $second-color 33.2%,
+    $third-color 33.2%,
+    $third-color 49.8%,
+    $fourth-color 49.8%,
+    $fourth-color 66.4%,
+    $fifth-color 66.4%,
+    $fifth-color 83%,
+    $sixth-color 83%,
+    $sixth-color 100%
+  );
+}
+
+.bottom-bar,
+.remark-slide-number {
+  font-size: 0.45em;
 }
 
 // Utilities
