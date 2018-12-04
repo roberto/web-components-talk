@@ -3,6 +3,8 @@ class: animation-fade
 layout: true
 
 <!-- This slide will serve as the base layout for all your slides -->
+
+.top-bar[]
 .bottom-bar[
   {{title}}
 ]
@@ -12,6 +14,7 @@ layout: true
 class: impact
 
 # {{title}}
+
 ## Usando o melhor do navegador
 
 ---
@@ -33,12 +36,11 @@ HTML já define diversas tags, tão simples quanto um `p` e tão poderosas quant
 
 ---
 
-
 ```js
 class ProfileAvatar extends HTMLElement {
   // ...
 }
-customElements.define('profile-avatar', ProfileAvatar)
+customElements.define("profile-avatar", ProfileAvatar);
 ```
 
 ???
@@ -80,16 +82,17 @@ customElements.define('profile-avatar', ProfileAvatar)
 
 ???
 Tudo junto.
+
 ---
 
 ```
 const shadow = this.attachShadow({mode: 'open'})
 shadow.appendChild(content)
 ```
+
 ---
 
 > TODO imagens demonstrando o uso de shadow aberto ou fechado. texto fora de cor X e texto interno usando ou não a mesma cor.
-
 
 ```
 body {
@@ -98,11 +101,10 @@ body {
 ```
 
 ---
+
 > TODO Fala de template. Com exemplo.
 
-
 > TODO Os templates são templates. Limpando o JS.
-
 
 ---
 
@@ -115,7 +117,7 @@ body {
 
 ---
 
-# Prakê que usa essa p*rra?
+# Prakê que usa essa p\*rra?
 
 - Compartilhar componentes
   - para a comunidade, date-picker
@@ -134,12 +136,9 @@ body {
   - OpenComponents
   - plastic-bag
 
-
 > O uso mais notável é de compartilhar componentes
 
-
 > Escrever melhor saporra.
-
 
 ---
 
@@ -163,12 +162,10 @@ body {
   - Sem previsão
 - Frameworks utilizando
   - perquisar: vue usando build, frameworks “somem” ao compilar
-- + WebAssembly
+- WebAssembly
   - https://medium.com/coinmonks/develop-w3c-web-components-with-webassembly-d65938284255
   - https://itnext.io/the-promise-of-webcomponents-webassembly-ad26af56fcf1
-
 
 ---
 
 # Obrigada/o! Dudas?
-
