@@ -211,9 +211,7 @@ class: impact color-3
 
 ---
 
-# Browers - Templates
-
-![templates](images/template.png)
+![compatibilidade](images/browsers.png)
 
 ---
 
@@ -246,3 +244,4 @@ class: impact color-6
   * https://caniuse.com/#search=custom%20element
   * https://caniuse.com/#search=shadow%20dom
   * https://caniuse.com/#feat=template
+* https://www.webcomponents.org/
