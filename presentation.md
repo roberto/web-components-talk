@@ -135,6 +135,26 @@ body {
 
 ---
 
+```html
+<template id="profile-avatar">
+  <a>
+    <img src="..." alt="..." />
+    <span class="name">...</span>
+  </a>
+</template>
+```
+```js
+class ProfileAvatar extends HTMLElement {
+  connectedCallback() {
+    let template = document.getElementById('profile-avatar').content
+    template.querySelector('a').href = '/my-profile';
+    ...
+
+    document.body.appendChild(template);
+  }
+}
+customElements.define('profile-avatar', ProfileAvatar)
+```
 > TODO Fala de template. Com exemplo.
 
 > TODO Os templates são templates. Limpando o JS.
