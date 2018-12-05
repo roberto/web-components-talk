@@ -11,11 +11,28 @@ layout: true
 
 ---
 
-class: impact color-1
+class: impact
 
 # {{title}}
 
 ## Usando o melhor do navegador
+
+(imagine um fundo branco)
+
+---
+
+# Agenda
+
+* O que são Web Components?
+* Para que servem?
+* Criando
+* O que vem por aí?
+
+---
+
+class: impact color-1
+
+# O que são Web Components?
 
 ---
 
@@ -117,7 +134,11 @@ body {
 
 ---
 
-# Prakê que usa essa p\*rra?
+class: impact color-2
+
+# Para que serve?
+
+---
 
 - Compartilhar componentes
   - para a comunidade, date-picker
@@ -142,6 +163,12 @@ body {
 
 ---
 
+class: impact color-3
+
+# Criando
+
+---
+
 # Compatibilidade
 
 - Browsers
@@ -156,7 +183,11 @@ body {
 
 ---
 
-# Futuro
+class: impact color-5
+
+# O que vem por aí?
+
+---
 
 - Outra versão?
   - Sem previsão
