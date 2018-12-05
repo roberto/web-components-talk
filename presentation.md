@@ -136,30 +136,49 @@ body {
 
 class: impact color-2
 
-# Para que serve?
+# Para que servem?
 
 ---
 
-- Compartilhar componentes
-  - para a comunidade, date-picker
-  - componentes internos
-  - Interoperabilidade com outras soluções
-    - Angular elements
-    - Vue wrapper
-    - https://github.com/vuejs/vue-web-component-wrapper
-    - https://angular.io/guide/elements
-- Site
-  - YouTube
-    - adicionar código aqui
-- Micro frontends
-  - Compor aplicações
+# Para que servem?
+
+* Compartilhar componentes
+* Criar aplicações
+* Micro frontends
+
+---
+
+# Compartilhar componentes
+
+- Públicos ou privados
+- Interoperabilidade com outras soluções
+
+---
+
+# Criar aplicações
+
+- YouTube
+
+```html
+<ytd-app style="--ytd-masthead-height:56px;">
+  <yt-activity-manager class="style-scope ytd-app">
+  </yt-activity-manager>
+  <yt-guide-manager id="guide-service" class="style-scope ytd-app">
+  </yt-guide-manager>
+  <yt-gfeedback-manager class="style-scope ytd-app">
+  </yt-gfeedback-manager>
+</ytd-app>
+```
+
+---
+
+# Micro frontends
+
+- Compor aplicações
   - [micro-frontends.org](https://micro-frontends.org/)
+- Ferramentas:
   - OpenComponents
   - plastic-bag
-
-> O uso mais notável é de compartilhar componentes
-
-> Escrever melhor saporra.
 
 ---
 
@@ -173,6 +192,8 @@ class: impact color-3
 
 - Browsers
 - Frameworks JS
+  - [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
+  - [Angular elements](https://angular.io/guide/elements)
 
 ---
 
