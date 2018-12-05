@@ -36,6 +36,8 @@ class: impact color-1
 
 ---
 
+## Elementos nativos
+
 ```html
 <p></p>
 <input />
@@ -43,15 +45,20 @@ class: impact color-1
 <video />
 ```
 
+## Seus elementos
+
 ```html
-<profile-avatar />
-<like-button />
+<profile-avatar></profile-avatar>
+<like-button></like-button>
 ```
 
 ???
-HTML já define diversas tags, tão simples quanto um `p` e tão poderosas quanto `video`. E se você pudesse criar as suas? Desde um botão “like” até elementos mais complexos quanto uma aplicação.
+HTML já define diversas tags, tão simples quanto um `p` e tão poderosas quanto `video`.
+E se você pudesse criar as suas? Desde um botão “like” até elementos mais complexos quanto uma aplicação.
 
 ---
+
+## Criando um elemento
 
 ```js
 class ProfileAvatar extends HTMLElement {
@@ -65,6 +72,8 @@ Basicamente você pode colocar seu código JavaScript numa unidade e disponibili
 
 ---
 
+## Clássica
+
 ```html
 <div class="profile-avatar">
   <a href="...">
@@ -73,8 +82,9 @@ Basicamente você pode colocar seu código JavaScript numa unidade e disponibili
   </a>
 </div>
 
+<script>
 <!-- ainda tendo que indicar as informações a serem apresentadas -->
-<profile-avatar />
+</script>
 ```
 
 ???
@@ -82,7 +92,9 @@ Teu HTML ficará bem mais limpo, facilitando a leitura, alterações, e todas aq
 
 ---
 
-```html
+## 
+
+```js
 class ProfileAvatar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -95,6 +107,10 @@ class ProfileAvatar extends HTMLElement {
   }
 }
 customElements.define('profile-avatar', ProfileAvatar)
+```
+
+```html
+<profile-avatar></profile-avatar>
 ```
 
 ???
