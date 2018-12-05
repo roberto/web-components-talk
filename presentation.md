@@ -58,22 +58,6 @@ E se você pudesse criar as suas? Desde um botão “like” até elementos mais
 
 ---
 
-## Criando um elemento
-
-```js
-class ProfileAvatar extends HTMLElement {
-  // ...
-}
-customElements.define("profile-avatar", ProfileAvatar);
-```
-
-???
-Basicamente você pode colocar seu código JavaScript numa unidade e disponibilizá-la para o navegador.
-
----
-
-## Clássica
-
 ```html
 <div class="profile-avatar">
   <a href="...">
@@ -91,8 +75,6 @@ Basicamente você pode colocar seu código JavaScript numa unidade e disponibili
 Teu HTML ficará bem mais limpo, facilitando a leitura, alterações, e todas aquelas coisas maravilhosas que você pode ler na nova edição de Refactoring por Martin Fowler.
 
 ---
-
-## 
 
 ```js
 class ProfileAvatar extends HTMLElement {
@@ -114,14 +96,7 @@ customElements.define('profile-avatar', ProfileAvatar)
 ```
 
 ???
-Tudo junto.
-
----
-
-```
-const shadow = this.attachShadow({mode: 'open'})
-shadow.appendChild(content)
-```
+Basicamente você pode colocar seu código JavaScript numa unidade e disponibilizá-la para o navegador.
 
 ---
 
@@ -131,6 +106,13 @@ shadow.appendChild(content)
 body {
   color: red;
 }
+```
+
+---
+
+```js
+const shadow = this.attachShadow({mode: 'open'})
+shadow.appendChild(content)
 ```
 
 ---
@@ -148,16 +130,12 @@ class ProfileAvatar extends HTMLElement {
   connectedCallback() {
     let template = document.getElementById('profile-avatar').content
     template.querySelector('a').href = '/my-profile';
-    ...
-
-    document.body.appendChild(template);
+    // ...
+    this.appendChild(template);
   }
 }
 customElements.define('profile-avatar', ProfileAvatar)
 ```
-> TODO Fala de template. Com exemplo.
-
-> TODO Os templates são templates. Limpando o JS.
 
 ---
 
@@ -176,17 +154,12 @@ class: impact color-2
 
 ---
 
-# Para que servem?
-
-* Compartilhar componentes
-* Criar aplicações
-* Micro frontends
-
----
-
 # Compartilhar componentes
 
-- Públicos ou privados
+> TODO: colocar imagem do site webcomponents (componentes!)
+
+???
+- Público e privado
 - Interoperabilidade com outras soluções
 
 ---
@@ -228,6 +201,7 @@ class: impact color-3
 
 * Ferramentas/Frameworks
 * Compatibilidade
+* Benchmark
 
 ---
 
@@ -251,6 +225,10 @@ class: center
 - [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
 - [Angular elements](https://angular.io/guide/elements)
 
+???
+TODO: confirmar vue build com web component
+TODO: logos em vez dos nomes
+
 ---
 
 class: impact color-5
@@ -259,10 +237,27 @@ class: impact color-5
 
 ---
 
-- Outra versão?
-  - Sem previsão
-- Frameworks utilizando
-  - perquisar: vue usando build, frameworks “somem” ao compilar
+# Outra versão? Sem previsão
+
+- Estabilidade
+  - Compatibilidade
+  - Sem migrações de versão
+
+---
+
+# Evolução das Ferramentas
+
+- Polymer
+  - lit-element ?TODO checar
+- Vue utilizando no build das aplicações
+
+???
+- frameworks “somem” ao compilar
+
+---
+
+# Empacotar WebAssembly
+
 - WebAssembly
   - https://medium.com/coinmonks/develop-w3c-web-components-with-webassembly-d65938284255
   - https://itnext.io/the-promise-of-webcomponents-webassembly-ad26af56fcf1
