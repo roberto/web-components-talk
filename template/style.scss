@@ -116,13 +116,13 @@ blockquote {
 
 // Additions
 .impact {
-  background-color: $primary;
+  background-color: black;
   vertical-align: middle;
   text-align: center;
   &,
   h1,
   h2 {
-    color: $text-light;
+    color: white;
   }
   h1 {
     font-size: $font-size-impact;

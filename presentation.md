@@ -17,7 +17,7 @@ class: impact
 
 ## Usando o melhor do navegador
 
-(imagine um fundo branco)
+por Sarah Caixeta e Roberto Soares
 
 ---
 
