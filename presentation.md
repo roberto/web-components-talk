@@ -188,6 +188,20 @@ class: impact color-3
 
 ---
 
+# Criando
+
+* Ferramentas/Frameworks
+* Compatibilidade
+
+---
+
+# Ferramentas
+
+- StencilJS
+- Polymer
+
+---
+
 # Compatibilidade
 
 - Browsers
@@ -197,10 +211,9 @@ class: impact color-3
 
 ---
 
-# Ferramentas
+# Browers - Templates
 
-- StencilJS
-- Polymer
+![templates](images/template.png)
 
 ---
 
@@ -224,3 +237,12 @@ class: impact color-6
 
 # Obrigada(o)!
 ## Perguntas?
+
+---
+
+# Referências
+
+* caniuse.com
+  * https://caniuse.com/#search=custom%20element
+  * https://caniuse.com/#search=shadow%20dom
+  * https://caniuse.com/#feat=template
