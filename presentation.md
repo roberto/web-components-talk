@@ -218,16 +218,18 @@ class: impact color-3
 
 ---
 
-# Compatibilidade
-
-- Browsers
-- Frameworks JS
-  - [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
-  - [Angular elements](https://angular.io/guide/elements)
+![compatibilidade nos navegadores](images/browsers.png)
 
 ---
 
-![compatibilidade](images/browsers.png)
+class: center
+
+![compatibilidade nos frameworks](images/frameworks.png)
+
+---
+
+- [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
+- [Angular elements](https://angular.io/guide/elements)
 
 ---
 
