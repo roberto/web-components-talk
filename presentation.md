@@ -19,13 +19,19 @@ class: impact
 
 por Sarah Caixeta e Roberto Soares
 
+???
+Um tweet sobre cada palestrante
+
+Sarah: 5 anos na TW, TL num projeto utilizando WebComponents para a criação
+de uma plataforma de produtos
+
 ---
 
 # Agenda
 
 * O que são Web Components?
 * Para que servem?
-* Criando
+* Dia-a-dia
 * O que vem por aí?
 
 ---
@@ -41,8 +47,8 @@ class: impact color-1
 ```html
 <p></p>
 <input />
-<audio />
-<video />
+<audio>...</audio>
+<video>...</video>
 ```
 
 ## Seus elementos
@@ -58,6 +64,8 @@ E se você pudesse criar as suas? Desde um botão “like” até elementos mais
 
 ---
 
+## Exemplo
+
 ```html
 <div class="profile-avatar">
   <a href="...">
@@ -72,7 +80,7 @@ E se você pudesse criar as suas? Desde um botão “like” até elementos mais
 ```
 
 ???
-Teu HTML ficará bem mais limpo, facilitando a leitura, alterações, e todas aquelas coisas maravilhosas que você pode ler na nova edição de Refactoring por Martin Fowler.
+Difícil de ser compartilhado e mantido.
 
 ---
 
@@ -96,13 +104,48 @@ customElements.define('profile-avatar', ProfileAvatar)
 ```
 
 ???
-Basicamente você pode colocar seu código JavaScript numa unidade e disponibilizá-la para o navegador.
+- Basicamente você pode colocar seu código JavaScript numa unidade e disponibilizá-la para o navegador.
+- Teu HTML ficará bem mais limpo, facilitando a leitura, alterações e todas aquelas coisas maravilhosa.
+
+---
+
+## HTML Templates
+
+```html
+<template id="profile-avatar">
+  <style>
+    a { color: blue }
+  </style>
+  <a>
+    <img src="..." alt="..." />
+    <span class="name">...</span>
+  </a>
+</template>
+```
+
+---
+
+## Usando o template
+
+```js
+class ProfileAvatar extends HTMLElement {
+  constructor() {
+    const template = document.getElementById('profile-avatar').content
+    this.appendChild(template.cloneNode(true));
+  }
+
+  connectedCallback() {
+    this.querySelector('a').href = '/my-profile'
+    // ...
+  }
+}
+```
 
 ---
 
 > TODO imagens demonstrando o uso de shadow aberto ou fechado. texto fora de cor X e texto interno usando ou não a mesma cor.
 
-```
+```css
 body {
   color: red;
 }
@@ -110,31 +153,17 @@ body {
 
 ---
 
-```js
-const shadow = this.attachShadow({mode: 'open'})
-shadow.appendChild(content)
-```
+## Shadow DOM
 
----
-
-```html
-<template id="profile-avatar">
-  <a>
-    <img src="..." alt="..." />
-    <span class="name">...</span>
-  </a>
-</template>
-```
 ```js
 class ProfileAvatar extends HTMLElement {
   connectedCallback() {
-    let template = document.getElementById('profile-avatar').content
-    template.querySelector('a').href = '/my-profile';
-    // ...
-    this.appendChild(template);
+    const content = ...
+
+    const shadow = this.attachShadow({mode: 'open'})
+    shadow.appendChild(content)
   }
 }
-customElements.define('profile-avatar', ProfileAvatar)
 ```
 
 ---
@@ -224,6 +253,7 @@ class: center
 
 - [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
 - [Angular elements](https://angular.io/guide/elements)
+- https://svelte.technology/guide#custom-elements
 
 ???
 TODO: confirmar vue build com web component
@@ -278,3 +308,5 @@ class: impact color-6
   * https://caniuse.com/#search=shadow%20dom
   * https://caniuse.com/#feat=template
 * https://www.webcomponents.org/
+* https://cli.vuejs.org/guide/build-targets.html#web-component
+* https://svelte.technology/guide#custom-elements
