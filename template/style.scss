@@ -209,6 +209,13 @@ blockquote {
   font-size: 0.45em;
 }
 
+.image-right {
+  img {
+    width: 55%;
+    float: right;
+  }
+}
+
 // Utilities
 // ---------------------------------------------------------------------------
 

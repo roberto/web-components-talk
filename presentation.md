@@ -196,8 +196,6 @@ class: impact color-2
 
 # Criar aplicações
 
-- YouTube
-
 ```html
 <ytd-app style="--ytd-masthead-height:56px;">
   <yt-activity-manager class="style-scope ytd-app">
@@ -211,7 +209,11 @@ class: impact color-2
 
 ---
 
+class: image-right
+
 # Micro frontends
+
+![exemplo micro-frontends](images/micro-frontends.png)
 
 - Compor aplicações
   - [micro-frontends.org](https://micro-frontends.org/)
@@ -311,3 +313,4 @@ class: impact color-6
 * https://www.webcomponents.org/
 * https://cli.vuejs.org/guide/build-targets.html#web-component
 * https://svelte.technology/guide#custom-elements
+* https://micro-frontends.org/
