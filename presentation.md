@@ -31,7 +31,7 @@ de uma plataforma de produtos
 
 * O que são Web Components?
 * Para que servem?
-* Dia-a-dia
+* Trabalhando com Web Components
 * O que vem por aí?
 
 ---
@@ -225,22 +225,37 @@ class: image-right
 
 class: impact color-3
 
-# Criando
+# Trabalhando com WebComponents
 
 ---
 
-# Criando
+## Vanilla
 
-* Ferramentas/Frameworks
-* Compatibilidade
-* Benchmark
+
 
 ---
 
-# Ferramentas
+class: center
 
+![stencil](images/stencil.png)
+
+???
 - StencilJS
+- leve, fácil setup, SSR, TypeScript, decorators
+- Ionic
+
+---
+
+class: center
+
+![polymer](images/polymer.png)
+
+???
+
 - Polymer
+- missão desaparecer, divulgar boas práticas
+- dividido em bibliotecas, ferramentas
+- Google
 
 ---
 
@@ -272,6 +287,13 @@ class: impact color-5
 
 # Outra versão? Sem previsão
 
+- Custom Elements: 2 versões
+  - v0, v1
+- Angular: 136 versões
+- React: 173 versões
+  - 0.0.1, 0.0.2, 0.0.3, 0.2.0, ... 0.14.7, 15.0.0, ..., 16.7.0-alpha.2
+
+???
 - Estabilidade
   - Compatibilidade
   - Sem migrações de versão
@@ -281,19 +303,23 @@ class: impact color-5
 # Evolução das Ferramentas
 
 - Polymer
-  - lit-element ?TODO checar
-- Vue utilizando no build das aplicações
+  - lit-element
+  - lit-html
+- Vue
+  - Wrapper
+  - Build target
+- Svelte
+  - Componentes com opção `tag`
 
 ???
-- frameworks “somem” ao compilar
+- Polymer ainda para lançar estável ferramentas como as citadas e mais
+- Vue podendo gerar bundle com Web Components
+- frameworks “somem” ao compilar utilizando custom element como uma das saídas
 
 ---
 
 # Empacotar WebAssembly
 
-- WebAssembly
-  - https://medium.com/coinmonks/develop-w3c-web-components-with-webassembly-d65938284255
-  - https://itnext.io/the-promise-of-webcomponents-webassembly-ad26af56fcf1
 
 ---
 
@@ -314,3 +340,5 @@ class: impact color-6
 * https://cli.vuejs.org/guide/build-targets.html#web-component
 * https://svelte.technology/guide#custom-elements
 * https://micro-frontends.org/
+* https://medium.com/coinmonks/develop-w3c-web-components-with-webassembly-d65938284255
+* https://itnext.io/the-promise-of-webcomponents-webassembly-ad26af56fcf1
