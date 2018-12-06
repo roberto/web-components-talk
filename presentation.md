@@ -143,13 +143,14 @@ class ProfileAvatar extends HTMLElement {
 
 ---
 
-> TODO imagens demonstrando o uso de shadow aberto ou fechado. texto fora de cor X e texto interno usando ou não a mesma cor.
+class: center
 
 ```css
-body {
-  color: red;
-}
+h1 { color: red; }
 ```
+
+![exemplos sem e com shadow dom](images/exemplo-shadow.png)
+
 
 ---
 
