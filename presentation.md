@@ -186,11 +186,11 @@ class: impact color-2
 
 # Compartilhar componentes
 
-> TODO: colocar imagem do site webcomponents (componentes!)
+![componentes sendo compartilhados](images/compartilhando.png)
 
 ???
 - Público e privado
-- Interoperabilidade com outras soluções
+- Interoperabilidade com outras soluções (React, Angular...)
 
 ---
 
