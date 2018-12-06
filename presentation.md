@@ -277,15 +277,10 @@ class: center
 
 ![compatibilidade nos frameworks](images/frameworks.png)
 
----
-
+???
 - [Vue wrapper](https://github.com/vuejs/vue-web-component-wrapper)
 - [Angular elements](https://angular.io/guide/elements)
 - https://svelte.technology/guide#custom-elements
-
-???
-TODO: confirmar vue build com web component
-TODO: logos em vez dos nomes
 
 ---
 
@@ -349,9 +344,6 @@ class: impact color-6
 # Referências
 
 * caniuse.com
-  * https://caniuse.com/#search=custom%20element
-  * https://caniuse.com/#search=shadow%20dom
-  * https://caniuse.com/#feat=template
 * https://www.webcomponents.org/
 * https://cli.vuejs.org/guide/build-targets.html#web-component
 * https://svelte.technology/guide#custom-elements
