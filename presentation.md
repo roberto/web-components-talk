@@ -186,7 +186,9 @@ class: impact color-2
 
 # Compartilhar componentes
 
-![componentes sendo compartilhados](images/compartilhando.png)
+.center[
+  ![componentes sendo compartilhados](images/compartilhando.png)
+]
 
 ???
 - Público e privado
@@ -231,7 +233,16 @@ class: impact color-3
 
 ## Vanilla
 
-
+* Ecossistema JS
+  * Webpack
+  * Babel
+  * TypeScript
+* Lifecycle
+  * constructor
+  * connectedCallback
+  * attributeChangedCallback (observedAttributes)
+  * disconnectedCallback
+* Polyfills
 
 ---
 
@@ -256,7 +267,6 @@ class: center
 - missão desaparecer, divulgar boas práticas
 - dividido em bibliotecas, ferramentas
 - Google
-
 ---
 
 ![compatibilidade nos navegadores](images/browsers.png)
@@ -300,7 +310,7 @@ class: impact color-5
 
 ---
 
-# Evolução das Ferramentas
+# Aumento do suporte
 
 - Polymer
   - lit-element
@@ -320,6 +330,12 @@ class: impact color-5
 
 # Empacotar WebAssembly
 
+.center[
+  ![game](images/game.png)
+]
+
+???
+Leitor de PDF, gerador de código de barra, jogos, captchas, editores
 
 ---
 
