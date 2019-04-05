@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "bs serve",
-    "build": "bs export --no-inline --output dist"
+    "build": "bs export --no-inline --output dist",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "backslide": "^2.3.2"
+    "backslide": "^2.3.2",
+    "gh-pages": "^2.0.1"
   }
 }
